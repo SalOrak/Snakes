@@ -301,7 +301,7 @@ in
 ## Time tracking
             timewarrior
             taskwarrior3
-            taskwarrior-tui
+            vit
 ## Other Gui Apps
             kdePackages.dolphin
             pavucontrol
