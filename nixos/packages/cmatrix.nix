@@ -1,6 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:
-
-
+{pkgs ? import <nixpkgs> {}}:
 pkgs.stdenv.mkDerivation rec {
   pname = "cmatrix";
   version = "0.1.0";
@@ -17,12 +15,12 @@ pkgs.stdenv.mkDerivation rec {
     ncurses5
   ];
 
-  buildPhase =  ''
+  buildPhase = ''
     make all
-'';
+  '';
 
   installPhase = ''
-  mkdir -p $out/bin
-  mv main $out/bin/cmatrix
-'';
+    mkdir -p $out/bin
+    mv main $out/bin/cmatrix
+  '';
 }

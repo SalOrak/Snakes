@@ -24,5 +24,5 @@ pkgs.stdenv.mkDerivation rec {
     mkdir -p $out/bin
     cp -r status/* $out/bin/
     mv dwmblocks $out/bin/dwmblocks
-     '';
+  '';
 }
