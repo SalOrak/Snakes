@@ -2,6 +2,9 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
+  inputs,
+  outputs,
+  lib,
   config,
   pkgs,
   ...
@@ -218,17 +221,6 @@ in {
     android-tools
 
     # Cli Apps
-    vim
-    neovim
-    fzf
-    fd
-    ripgrep
-    feh
-    wget
-    coreutils
-    binutils
-    pciutils
-    dmidecode
     xorg.libXi
     xorg.libXmu
     freeglut
@@ -240,16 +232,9 @@ in {
     libtool
     libvterm
     scrot
-    git
-    curl
-    tmux
     rofi
     rsync
-    inetutils
     xclip
-    brightnessctl
-    unzip
-    jq
     caligula # TUI Disk Burner
     ntfs3g # NTFS mount
     bat
@@ -280,7 +265,6 @@ in {
     gruvbox-dark-icons-gtk
 
     # Utils
-    zip
     texliveFull # TeX Live Environment
     typst # Slowly replacing LaTex I guess
     pandoc
@@ -306,11 +290,8 @@ in {
     kdePackages.dolphin
     pavucontrol
     flameshot
-    alacritty
-    firefox
     docker
     peek
-    keepassxc
     zathura
     networkmanagerapplet
     calibre
@@ -351,10 +332,6 @@ in {
 
     # Practice programming (I guess)
     exercism
-
-    # Man pages
-    man-pages
-    man-pages-posix
 
     # Game Development
     # godot_4
