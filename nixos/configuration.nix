@@ -640,7 +640,7 @@ in {
           adult = [
             "https://blocklistproject.github.io/Lists/porn.txt"
             "https://blocklistproject.github.io/Lists/tiktok.txt"
-            "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn-social-only/hosts"
+            "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn-only/hosts"
             "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts"
           ];
           #You can add additional categories
