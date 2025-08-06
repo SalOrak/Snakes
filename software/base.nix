@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  inputs,
   ...
 }: {
   environment.systemPackages = with pkgs; [
@@ -31,6 +32,10 @@
     inetutils
     dmidecode
     brightnessctl
+    file
+
+    # Image utils
+    inkscape
 
     # Man pages
     man-pages
