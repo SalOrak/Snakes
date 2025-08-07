@@ -8,6 +8,7 @@
     # Gui apps
     firefox
     alacritty
+    alacritty-theme
     keepassxc
 
     # Cli apps
