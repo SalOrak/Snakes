@@ -199,14 +199,6 @@ in {
       packages = with pkgs; [
       ];
     };
-
-    salorak = {
-      isNormalUser = true;
-      description = "Admin";
-      extraGroups = ["networkmanager" "wheel" "docker" "syncthing" "wireshark"];
-      packages = with pkgs; [
-      ];
-    };
   };
 
   # Allow unfree packages
@@ -457,26 +449,26 @@ in {
 
   # Custom Systemd Services
   systemd.user.services = {
-    wallpaper = {
-      description = "Set wallpaper using feh";
-      wantedBy = ["graphical-session.target"];
-      after = ["graphical-session.target"];
-      serviceConfig = {
-        Type = "oneshot";
-        ExecStart = ''${pkgs.feh}/bin/feh --bg-scale "/home/hector/Pictures/wallpaper.jpg"'';
-        Restart = "on-failure";
-      };
-    };
-    picom = {
-      description = "Picom Compositor";
-      wantedBy = ["graphical-session.target"];
-      after = ["graphical-session.target"];
-      serviceConfig = {
-        ExecStart = ''${pkgs.picom}/bin/picom'';
-        RestartSec = 3;
-        Restart = "always";
-      };
-    };
+    # wallpaper = {
+    #   description = "Set wallpaper using feh";
+    #   wantedBy = ["graphical-session.target"];
+    #   after = ["graphical-session.target"];
+    #   serviceConfig = {
+    #     Type = "oneshot";
+    #     ExecStart = ''${pkgs.feh}/bin/feh --bg-scale "/home/hector/Pictures/wallpaper.jpg"'';
+    #     Restart = "on-failure";
+    #   };
+    # };
+    # picom = {
+    #   description = "Picom Compositor";
+    #   wantedBy = ["graphical-session.target"];
+    #   after = ["graphical-session.target"];
+    #   serviceConfig = {
+    #     ExecStart = ''${pkgs.picom}/bin/picom'';
+    #     RestartSec = 3;
+    #     Restart = "always";
+    #   };
+    # };
     dunst = {
       description = "Dunst: Notification server";
       wantedBy = ["graphical-session.target"];
