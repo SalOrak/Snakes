@@ -571,7 +571,7 @@ in {
       CPU_MIN_PERF_ON_AC = 0;
       CPU_MAX_PERF_ON_AC = 100;
       CPU_MIN_PERF_ON_BAT = 0;
-      CPU_MAX_PERF_ON_BAT = 60;
+      CPU_MAX_PERF_ON_BAT = 75;
 
       # Enable platform profile on low-power
       PLATFORM_PROFILE_ON_AC = "performance";
@@ -579,11 +579,11 @@ in {
 
       # Disable turbo boost
       CPU_BOOST_ON_AC = 1;
-      CPU_BOOST_ON_BAT = 0;
+      CPU_BOOST_ON_BAT = 1;
 
       # Increase ABM level
       AMDGPU_ABM_LEVEL_ON_AC = 0;
-      AMDGPU_ABM_LEVEL_ON_BAT = 3;
+      AMDGPU_ABM_LEVEL_ON_BAT = 2;
 
       # Enable runtime power management
       # Set to `on` because it disconnects the keyboard
