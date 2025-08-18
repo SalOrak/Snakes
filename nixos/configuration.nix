@@ -341,9 +341,6 @@ in {
     sshpass
 
     # Gaming
-    mangohud
-    protonup-qt
-    lutris
     moonlight-qt
     libva-utils
     ffmpeg-full
@@ -398,7 +395,7 @@ in {
   hardware.xpadneo.enable = true; # xpadneo driver for Xbox One Wireless Controller
 
   boot = {
-    extraModulePackages = with config.boot.kernelPackages; [xpadneo];
+    # extraModulePackages = with config.boot.kernelPackages; [xpadneo];
     extraModprobeConfig = ''
       options bluetooth disable_ertm=Y
     '';
@@ -651,9 +648,6 @@ in {
     };
   };
 
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
-  programs.gamemode.enable = true;
 
   networking = {
     interfaces.enp0s31f6 = {
