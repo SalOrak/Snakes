@@ -319,6 +319,8 @@ in {
     zig
     alejandra
     nodejs_24
+    nasm
+
 
     # SSG
     zola

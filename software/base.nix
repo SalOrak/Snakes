@@ -7,6 +7,7 @@
   environment.systemPackages = with pkgs; [
     # Gui apps
     firefox
+    ungoogled-chromium
     alacritty
     alacritty-theme
     keepassxc
