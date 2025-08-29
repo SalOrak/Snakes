@@ -26,8 +26,6 @@
     unzip
     jq
     git
-    aerc
-    protonmail-bridge
 
     # BinUtils
     coreutils
