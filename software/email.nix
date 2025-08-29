@@ -8,8 +8,8 @@
     aerc
   ];
 
-  services.protonmail-bridge{ 
+  services.protonmail-bridge = { 
       enable = true;
-      path = with pkgs; [ pass ]
-  }
+      path = with pkgs; [ pass ];
+  };
 }
