@@ -26,6 +26,8 @@
     unzip
     jq
     git
+    aerc
+    protonmail-bridge
 
     # BinUtils
     coreutils
@@ -35,6 +37,9 @@
     dmidecode
     brightnessctl
     file
+
+    # Temperature wise
+    lm_sensors
 
     # Image utils
     inkscape
