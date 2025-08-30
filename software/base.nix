@@ -11,6 +11,7 @@
     alacritty
     alacritty-theme
     keepassxc
+    libsecret
 
     # Cli apps
     vim
