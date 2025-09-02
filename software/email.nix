@@ -10,6 +10,10 @@
 
   services.protonmail-bridge = { 
       enable = true;
-      path = with pkgs; [ pass ];
+      path = with pkgs; [ keepassxc ];
   };
+
+  security.pki.certificateFiles= [
+    /home/hector/opt/protonmail/cert.pem
+  ];
 }
