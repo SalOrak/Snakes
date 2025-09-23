@@ -315,11 +315,16 @@ in {
     rustup
     clippy
     python3
-    jdk17
     zig
     alejandra
     nodejs_24
     nasm
+    cargo
+
+    # Java Programming
+    maven
+    gradle
+    jdk21_headless
 
 
     # SSG
@@ -651,16 +656,16 @@ in {
   };
 
 
-  networking = {
-    interfaces.enp0s31f6 = {
-      ipv4.addresses = [
-        {
-          address = "10.10.11.36";
-          prefixLength = 24;
-        }
-      ];
-    };
-  };
+  # networking = {
+  #   interfaces.enp0s31f6 = {
+  #     ipv4.addresses = [
+  #       {
+  #         address = "10.10.11.36";
+  #         prefixLength = 24;
+  #       }
+  #     ];
+  #   };
+  # };
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ 8080 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
