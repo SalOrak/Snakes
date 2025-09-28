@@ -325,7 +325,7 @@ in {
     maven
     gradle
     jdk21_headless
-
+    spring-boot-cli
 
     # SSG
     zola
@@ -654,7 +654,6 @@ in {
       };
     };
   };
-
 
   # networking = {
   #   interfaces.enp0s31f6 = {

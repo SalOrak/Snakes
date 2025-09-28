@@ -1,7 +1,10 @@
-{pkgs, config, inputs, ...}: 
 {
-   environment.systemPackages = with pkgs; [
-
+  pkgs,
+  config,
+  inputs,
+  ...
+}: {
+  environment.systemPackages = with pkgs; [
     #  IRC clients
     irssi
     tiny
@@ -10,6 +13,8 @@
 
     # Tor
     tor
-   ]; 
 
+    # Teams
+    teams
+  ];
 }
