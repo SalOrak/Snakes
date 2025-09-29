@@ -13,8 +13,5 @@
 
     # Tor
     tor
-
-    # Teams
-    teams
   ];
 }
