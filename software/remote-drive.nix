@@ -17,8 +17,8 @@
         serviceConfig = {
           Type = "oneshot";
           ExecStart = ''
-            ${pkgs.rclone}/bin/rclone bisync ~/drive/personal/dev dev-personal:/ &;
-            ${pkgs.rclone}/bin/rclone bisync ~/drive/personal/proton proton-personal:/ &;
+            ${pkgs.rclone}/bin/rclone bisync ~/drive/personal/dev dev-personal:/
+            ${pkgs.rclone}/bin/rclone bisync ~/drive/personal/proton proton-personal:/
           '';
         };
       };
@@ -28,8 +28,8 @@
         serviceConfig = {
           Type = "oneshot";
           ExecStart = ''
-            ${pkgs.rclone}/bin/rclone bisync ~/drive/personal/dev dev-personal:/ &;
-            ${pkgs.rclone}/bin/rclone bisync ~/drive/personal/proton proton-personal:/ &;
+            ${pkgs.rclone}/bin/rclone bisync ~/drive/personal/dev dev-personal:/
+            ${pkgs.rclone}/bin/rclone bisync ~/drive/personal/proton proton-personal:/
           '';
         };
       };
@@ -59,7 +59,7 @@
         serviceConfig = {
           Type = "oneshot";
           ExecStart = ''
-            ${pkgs.rclone}/bin/rclone bisync ~/drive/work/proven work-proven:/ &;
+            ${pkgs.rclone}/bin/rclone bisync ~/drive/work/proven work-proven:/
           '';
         };
       };
@@ -69,7 +69,7 @@
         serviceConfig = {
           Type = "oneshot";
           ExecStart = ''
-            ${pkgs.rclone}/bin/rclone bisync ~/drive/work/proven work-proven:/ &;
+            ${pkgs.rclone}/bin/rclone bisync ~/drive/work/proven work-proven:/
           '';
         };
       };
