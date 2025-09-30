@@ -5,7 +5,8 @@
 }: let
   rclone-personal-script = pkgs.writeShellScriptBin "rclone-personal-script" ''
     ${pkgs.rclone}/bin/rclone bisync ~/drive/personal/dev dev-personal:/
-    ${pkgs.rclone}/bin/rclone bisync ~/drive/personal/proton proton-personal:/
+    # For some reason, rclone segfaults on proton drive :(
+    # ${pkgs.rclone}/bin/rclone bisync ~/drive/personal/proton proton-personal:/
   '';
 
   rclone-work-script = pkgs.writeShellScriptBin "rclone-work-script" ''
