@@ -3,7 +3,7 @@
   config,
   ...
 }: {
-  xdg.mimeApps = {
+  xdg.defaultApplications = {
     "application/pdf" = "zathura.desktop";
     "application/msword" = "libreoffice-writer.desktop";
     "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = "libreoffice-writer.desktop";
