@@ -8,6 +8,7 @@
     ./cmatrix.nix
     ./email.nix
     ./remote-drive.nix
+    ./mime-types.nix
     ./test.nix
   ];
 }
