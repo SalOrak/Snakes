@@ -326,6 +326,8 @@ in {
     gradle
     jdk21_headless
     spring-boot-cli
+    kubernetes
+    kafkactl
 
     # SSG
     zola
