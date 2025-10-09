@@ -10,5 +10,6 @@
     ./remote-drive.nix
     ./mime-types.nix
     ./test.nix
+    ./work.nix
   ];
 }
