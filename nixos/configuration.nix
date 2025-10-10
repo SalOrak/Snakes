@@ -327,6 +327,7 @@ in {
     jdk21_headless
     spring-boot-cli
     kubernetes
+    minikube
     kafkactl
 
     # SSG
