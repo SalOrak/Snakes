@@ -327,8 +327,12 @@ in {
     jdk21_headless
     spring-boot-cli
     kubernetes
+    kubernetes-helm
     minikube
     kafkactl
+
+    ## I guess :(
+    jetbrains.idea-community
 
     # SSG
     zola
