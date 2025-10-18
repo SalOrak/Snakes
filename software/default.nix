@@ -12,5 +12,6 @@
     ./mime-types.nix
     ./test.nix
     ./work.nix
+    ./games.nix
   ];
 }
