@@ -4,8 +4,10 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    bottles
-    wine
+    wineWowPackages.waylandFull
     winetricks
+    bottles
+    pokefinder
+    desmume
   ];
 }
