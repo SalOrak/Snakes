@@ -320,6 +320,7 @@ in {
     nodejs_24
     nasm
     cargo
+    marksman
 
     # Java Programming
     maven
