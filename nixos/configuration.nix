@@ -321,9 +321,6 @@ in {
     nasm
     cargo
 
-    # For marksman lsp to work
-    icu
-
     # Java Programming
     maven
     gradle
