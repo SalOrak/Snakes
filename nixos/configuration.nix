@@ -320,7 +320,9 @@ in {
     nodejs_24
     nasm
     cargo
-    marksman
+
+    # For marksman lsp to work
+    icu
 
     # Java Programming
     maven
