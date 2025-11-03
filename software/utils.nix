@@ -10,6 +10,9 @@
 
   programs.nix-ld = {
     enable = true;
-    libraries = with pkgs; [icu]; # Fix Marksman problems
+    libraries = with pkgs; [
+      icu
+      libusb1
+    ]; # Fix Marksman problems
   };
 }
