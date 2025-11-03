@@ -9,7 +9,7 @@
   ];
 
   programs.nix-ld = {
-      enable = true;
-      libraries = with pkgs; [ icu ] # Fix Marksman problems
+    enable = true;
+    libraries = with pkgs; [icu]; # Fix Marksman problems
   };
 }

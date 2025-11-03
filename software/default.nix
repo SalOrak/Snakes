@@ -13,5 +13,6 @@
     ./test.nix
     ./work.nix
     ./games.nix
+    ./embedded.nix
   ];
 }
