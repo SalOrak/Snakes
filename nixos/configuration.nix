@@ -195,7 +195,7 @@ in {
     hector = {
       isNormalUser = true;
       description = "hector";
-      extraGroups = ["networkmanager" "wheel" "docker" "syncthing" "wireshark" "video"];
+      extraGroups = ["networkmanager" "wheel" "docker" "syncthing" "wireshark" "video" "dialout"];
       packages = with pkgs; [
       ];
     };
