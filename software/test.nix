@@ -13,5 +13,8 @@
 
     # Tor
     tor
+
+    # Pinentry
+    wayprompt
   ];
 }
