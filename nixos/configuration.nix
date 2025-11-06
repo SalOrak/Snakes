@@ -535,6 +535,7 @@ in {
     agent = {
       enable = true;
       enableSSHSupport = true;
+      pinentryPackage = pkgs.pinentry-gnome3;
       settings = {
         default-cache-ttl = 86400;
         default-cache-ttl-ssh = 86400;
