@@ -1,20 +1,20 @@
 {
   pkgs,
   config,
-  inputs,
+  pkgs-unstable,
   ...
 }: {
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
     #  IRC clients
-    irssi
-    tiny
+    pkgs.irssi
+    pkgs.tiny
     # Latex Replacements
-    typst
+    pkgs.typst
 
     # Tor
-    tor
+    pkgs.tor
 
     # Pinentry
-    wayprompt
+    pkgs.wayprompt
   ];
 }

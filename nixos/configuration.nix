@@ -7,6 +7,7 @@
   lib,
   config,
   pkgs,
+  pkgs-unstable,
   ...
 }: let
   emacsTree = (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages (
@@ -206,161 +207,163 @@ in {
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    # Command Prompt
+  environment.systemPackages =
+    (with pkgs; [
+      # Command Prompt
+      starship
+      android-tools
 
-    starship
-    android-tools
+      # Cli Apps
+      xorg.libXi
+      xorg.libXmu
+      freeglut
+      xorg.libXext
+      xorg.libX11
+      xorg.libXv
+      xorg.libXrandr
+      zlib
+      libtool
+      libvterm
+      scrot
+      rofi
+      rsync
+      xclip
+      caligula # TUI Disk Burner
+      ntfs3g # NTFS mount
+      bat
+      ncurses
 
-    # Cli Apps
-    xorg.libXi
-    xorg.libXmu
-    freeglut
-    xorg.libXext
-    xorg.libX11
-    xorg.libXv
-    xorg.libXrandr
-    zlib
-    libtool
-    libvterm
-    scrot
-    rofi
-    rsync
-    xclip
-    caligula # TUI Disk Burner
-    ntfs3g # NTFS mount
-    bat
-    ncurses
+      # gtk
+      gtk-engine-murrine
+      gtk_engines
+      gsettings-desktop-schemas
+      lxappearance
+      glib
 
-    # gtk
-    gtk-engine-murrine
-    gtk_engines
-    gsettings-desktop-schemas
-    lxappearance
-    glib
+      # PDF viewing and manipulation
+      imagemagick
 
-    # PDF viewing and manipulation
-    imagemagick
+      isync # Mailbox Synchronizer
+      notmuch # Mail Indexer
+      pass # Command Line password  manager
+      gnupg # GPG
 
-    isync # Mailbox Synchronizer
-    notmuch # Mail Indexer
-    pass # Command Line password  manager
-    gnupg # GPG
+      #Services
+      #dwm-bar
+      dunst
+      dwm-blocks
+      picom
 
-    #Services
-    #dwm-bar
-    dunst
-    dwm-blocks
-    picom
+      # Theme
+      gruvbox-dark-icons-gtk
 
-    # Theme
-    gruvbox-dark-icons-gtk
+      # Utils
+      texliveFull # TeX Live Environment
+      typst # Slowly replacing LaTex I guess
+      pandoc
 
-    # Utils
-    texliveFull # TeX Live Environment
-    typst # Slowly replacing LaTex I guess
-    pandoc
+      # Video / Audio
+      yt-dlp
+      ffmpeg
+      vlc
+      blueman
+      wireplumber
+      pipewire
+      bluez
+      bluez-alsa
+      bluez-tools
 
-    # Video / Audio
-    yt-dlp
-    ffmpeg
-    vlc
-    blueman
-    wireplumber
-    pipewire
-    bluez
-    bluez-alsa
-    bluez-tools
+      # Gui App
 
-    # Gui App
+      ## Time tracking
+      timewarrior
+      taskwarrior3
+      taskwarrior-tui
 
-    ## Time tracking
-    timewarrior
-    taskwarrior3
-    taskwarrior-tui
+      ## Other Gui Apps
+      kdePackages.dolphin
+      pavucontrol
+      flameshot
+      docker
+      peek
+      zathura
+      networkmanagerapplet
+      calibre
+      discord
+      libreoffice
+      qutebrowser
+      (emacsTree.overrideAttrs (oldAttrs: {
+        withNativeCompilation = true;
+        withMailutils = true;
+        withTreeSitter = true;
+        withImageMagick = true;
+        withGTK3 = false;
+      }))
 
-    ## Other Gui Apps
-    kdePackages.dolphin
-    pavucontrol
-    flameshot
-    docker
-    peek
-    zathura
-    networkmanagerapplet
-    calibre
-    discord
-    libreoffice
-    qutebrowser
-    (emacsTree.overrideAttrs (oldAttrs: {
-      withNativeCompilation = true;
-      withMailutils = true;
-      withTreeSitter = true;
-      withImageMagick = true;
-      withGTK3 = false;
-    }))
+      # Network utils
+      # Download the deb from here: https://www.netacad.com/resources/lab-downloads?courseLang=en-US
+      # Then add it to the store: nix-store --add-fixed sha256 CiscoPacketTracer822_amd64_signed.debx
+      # ciscoPacketTracer8
+      nmap
+      fping
+      wireguard-tools
+      openvpn
 
-    # Network utils
-    # Download the deb from here: https://www.netacad.com/resources/lab-downloads?courseLang=en-US
-    # Then add it to the store: nix-store --add-fixed sha256 CiscoPacketTracer822_amd64_signed.debx
-    # ciscoPacketTracer8
-    nmap
-    fping
-    wireguard-tools
-    openvpn
+      # Programming
+      gnumake
+      gcc
+      clang
+      rustup
+      clippy
+      python3
+      alejandra
+      nodejs_24
+      nasm
+      cargo
+      go
 
-    # Programming
-    gnumake
-    gcc
-    clang
-    rustup
-    clippy
-    python3
-    zig
-    alejandra
-    nodejs_24
-    nasm
-    cargo
-    go
+      # Java Programming
+      maven
+      gradle
+      jdk21_headless
+      spring-boot-cli
+      kubernetes
+      kubernetes-helm
+      minikube
+      kafkactl
 
-    # Java Programming
-    maven
-    gradle
-    jdk21_headless
-    spring-boot-cli
-    kubernetes
-    kubernetes-helm
-    minikube
-    kafkactl
+      ## I guess :(
+      jetbrains.idea-community
 
-    ## I guess :(
-    jetbrains.idea-community
+      # SSG
+      zola
 
-    # SSG
-    zola
+      # Practice programming (I guess)
+      exercism
 
-    # Practice programming (I guess)
-    exercism
+      # Game Development
+      # godot_4
+      # aseprite # Animated sprite editor & pixel art tool
 
-    # Game Development
-    # godot_4
-    # aseprite # Animated sprite editor & pixel art tool
+      # Wireshark
+      wireshark
 
-    # Wireshark
-    wireshark
+      # Qemu
+      qemu
 
-    # Qemu
-    qemu
+      # Ansible
+      ansible
+      sshpass
 
-    # Ansible
-    ansible
-    sshpass
-
-    # Gaming
-    moonlight-qt
-    libva-utils
-    ffmpeg-full
-    mpv
-  ];
+      # Gaming
+      moonlight-qt
+      libva-utils
+      ffmpeg-full
+      mpv
+    ])
+    ++ (with pkgs-unstable; [
+      zig
+    ]);
 
   documentation = {
     enable = true;
