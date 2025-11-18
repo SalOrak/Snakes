@@ -339,7 +339,7 @@ in {
       zola
 
       # Practice programming (I guess)
-      exercism
+      # exercism
 
       # Game Development
       # godot_4
@@ -363,6 +363,7 @@ in {
     ])
     ++ (with pkgs-unstable; [
       zig
+      exercism
     ]);
 
   documentation = {

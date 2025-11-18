@@ -28,13 +28,14 @@
 
     nixosConfigurations."${hostname}" = nixpkgs.lib.nixosSystem {
       specialArgs = {
-        inherit inputs outputs;
+        inherit inputs outputs system;
 
         pkgs-unstable = import nixpkgs-unstable {
           inherit system;
           config.allowUnfree = true;
         };
       };
+
       modules = [
         # Main Nixos Configuration file
         ./nixos/configuration.nix
