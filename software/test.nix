@@ -7,7 +7,6 @@
   environment.systemPackages = [
     #  IRC clients
     pkgs.irssi
-    pkgs.tiny
     # Latex Replacements
     pkgs.typst
 
