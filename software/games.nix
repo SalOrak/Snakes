@@ -9,5 +9,10 @@
     bottles
     pokefinder
     desmume
+    # Gaming
+    moonlight-qt
+    libva-utils
+    ffmpeg-full
+    mpv
   ];
 }

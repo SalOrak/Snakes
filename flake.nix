@@ -40,6 +40,7 @@
         # Main Nixos Configuration file
         ./nixos/configuration.nix
         ./software
+        ./options
       ];
     };
   };
