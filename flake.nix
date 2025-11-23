@@ -38,9 +38,8 @@
 
       modules = [
         # Main Nixos Configuration file
-        ./nixos/configuration.nix
+        ./system
         ./software
-        ./options
       ];
     };
   };
