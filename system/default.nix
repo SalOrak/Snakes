@@ -10,5 +10,7 @@
     ./system.nix
     ./hardware.nix
     ./display-manager.nix
+    ./programs.nix
+    ./services.nix
   ];
 }

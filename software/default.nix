@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./base.nix
+    ./packages.nix
     ./utils.nix
     ./cmatrix.nix
     ./email.nix
