@@ -109,7 +109,6 @@
       alejandra
       nodejs_24
       nasm
-      cargo
       go
 
       # Java Programming

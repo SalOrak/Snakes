@@ -15,5 +15,10 @@
     ./work.nix
     ./games.nix
     ./embedded.nix
+    ./virtualization.nix
+    ./rust.nix
   ];
+
+  games.enable = true;
+  games.pokemonHacking = true;
 }
