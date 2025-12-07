@@ -13,6 +13,7 @@
     flex
     bison
     gperf
+    usbutils
   ];
 
   services.udev.extraRules = ''
