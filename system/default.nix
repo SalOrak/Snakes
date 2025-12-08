@@ -12,5 +12,6 @@
     ./display-manager.nix
     ./programs.nix
     ./services.nix
+    ./udev.nix
   ];
 }

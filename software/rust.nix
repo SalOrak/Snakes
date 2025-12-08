@@ -10,5 +10,7 @@
     openocd
     gdb
     udev
+    bacon
+    rusty-man # Rust in the MAN pages
   ];
 }

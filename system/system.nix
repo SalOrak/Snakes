@@ -29,7 +29,7 @@
     hector = {
       isNormalUser = true;
       description = "hector";
-      extraGroups = ["networkmanager" "wheel" "docker" "syncthing" "wireshark" "video" "dialout"];
+      extraGroups = ["networkmanager" "wheel" "docker" "syncthing" "wireshark" "video" "dialout" "plugdev"];
     };
   };
 
