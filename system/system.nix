@@ -24,11 +24,18 @@
     LC_TIME = "es_ES.UTF-8";
   };
 
+  users.groups = {
+    plugdev = {};
+    wireshark = {};
+    syncthing = {};
+    docker = {};
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users = {
     hector = {
       isNormalUser = true;
-      description = "hector";
+      description = "hector aa";
       extraGroups = ["networkmanager" "wheel" "docker" "syncthing" "wireshark" "video" "dialout" "plugdev"];
     };
   };
