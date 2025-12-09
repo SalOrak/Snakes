@@ -7,6 +7,7 @@
   environment.systemPackages = with pkgs; [
     # Gui apps
     firefox
+    librewolf
     ungoogled-chromium
     alacritty
     alacritty-theme
