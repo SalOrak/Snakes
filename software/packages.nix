@@ -103,7 +103,6 @@
       gnumake
       gcc
       clang
-      rustup
       clippy
       python3
       alejandra
