@@ -5,6 +5,7 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
+    rust-bin.stable.latest.default
     clippy
     openocd
     gdb
