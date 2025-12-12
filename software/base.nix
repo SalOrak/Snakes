@@ -27,7 +27,7 @@
     zip
     unzip
     jq
-    git
+    gitFull
 
     # BinUtils
     coreutils
