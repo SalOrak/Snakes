@@ -13,6 +13,7 @@
     alacritty-theme
     keepassxc
     libsecret
+    git-credential-keepassxc
 
     # Cli apps
     vim
