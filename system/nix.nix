@@ -15,6 +15,20 @@
       dates = "daily";
       options = "--delete-older-than 7d";
     };
+
+    # Easy access to custom templates (nix flake init -t orak#)
+    registry = {
+      orak = {
+        from = {
+          type = "indirect";
+          id = "orak";
+        };
+        to = {
+          type = "git";
+          url = "https://github.com/salorak/nix-orak";
+        };
+      };
+    };
   };
 
   nixpkgs.config.allowUnfree = true;

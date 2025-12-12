@@ -28,7 +28,7 @@
     formatter."${system}" = nixpkgs.legacyPackages."${system}".alejandra;
 
     # Your custom packages and modifications, exported as overlays
-     overlays = import ./overlays {inherit inputs;};
+    overlays = import ./overlays {inherit inputs;};
 
     nixosConfigurations."${hostname}" = nixpkgs.lib.nixosSystem {
       specialArgs = {
