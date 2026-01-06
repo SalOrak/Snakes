@@ -9,6 +9,7 @@
     firefox
     librewolf
     ungoogled-chromium
+    ghostty
     alacritty
     alacritty-theme
     keepassxc

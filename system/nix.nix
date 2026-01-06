@@ -17,6 +17,7 @@
     };
 
     # Easy access to custom templates (nix flake init -t orak#)
+    # To update: `nix flake update --flake orak`
     registry = {
       orak = {
         from = {
