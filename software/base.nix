@@ -14,6 +14,7 @@
     alacritty-theme
     keepassxc
     libsecret
+    obsidian
 
     # Cli apps
     vim
