@@ -17,6 +17,7 @@
     ./embedded.nix
     ./virtualization.nix
     ./rust.nix
+    ./wacom.nix
   ];
 
   games.enable = true;
