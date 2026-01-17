@@ -64,7 +64,7 @@
   # If a problem arises, check the ~/.config/systemd/user/xdg-desktop-portal.service points to a valid service.
   # If not, manually link it (the correct one is always at /etc/systemd/usr/xdg-desktop-portal.service).
   # You can read that with:   readlink /etc/systemd/usr/xdg-desktop-portal.service
-  # Or you can just execute: ln -f -s $(readlink /etc/systemd/usr/xdg-desktop-portal.service) ~/.config/systemd/user/xdg-desktop-portal.service
+  # Or you can just execute: ln -f -s $(readlink /etc/systemd/user/xdg-desktop-portal.service) ~/.config/systemd/user/xdg-desktop-portal.service
   xdg.portal = {
     enable = true;
     wlr.enable = true;

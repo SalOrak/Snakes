@@ -13,7 +13,7 @@
     gc = {
       automatic = true;
       dates = "daily";
-      options = "--delete-older-than 7d";
+      options = "--delete-older-than 180d";
     };
 
     # Easy access to custom templates (nix flake init -t orak#)
