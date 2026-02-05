@@ -2,8 +2,7 @@
   pkgs,
   config,
   ...
-}: 
- {
+}: {
   environment.systemPackages = with pkgs; [
     ninja
     ccache
@@ -15,5 +14,6 @@
     bison
     gperf
     usbutils
+    rpi-imager
   ];
 }

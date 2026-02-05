@@ -13,5 +13,6 @@
     ./programs.nix
     ./services.nix
     ./udev.nix
+    ./firewall.nix
   ];
 }
