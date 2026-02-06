@@ -5,7 +5,7 @@
 }: {
   services.dbus.enable = true;
   services.openssh = {
-    enable = false;
+    enable = true;
     settings = {
       PasswordAuthentication = true;
       # Port = 2222;
