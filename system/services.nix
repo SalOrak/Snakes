@@ -10,7 +10,6 @@
       PasswordAuthentication = true;
       # Port = 2222;
       PermitRootLogin = "no";
-      # AuthorizedKeys2File = "/home/hector/.ssh/authorized_keys";
     };
     listenAddresses = [
       {
