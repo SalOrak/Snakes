@@ -8,15 +8,9 @@
     enable = true;
     settings = {
       PasswordAuthentication = true;
-      # Port = 2222;
+      Port = 2222;
       PermitRootLogin = "no";
     };
-    listenAddresses = [
-      {
-        addr = "192.168.1.136";
-        port = 2222;
-      }
-    ];
     banner = "
 
 //////////////////////////////////////////////
