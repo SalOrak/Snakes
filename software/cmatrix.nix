@@ -9,7 +9,7 @@
     cmatrix.enable = lib.mkEnableOption "Orak Cmatrix package";
   };
 
-  config = lib.mkIf options.cmatrix.enable {
+  config = lib.mkIf config.cmatrix.enable {
     nixpkgs.overlays = [
       outputs.overlays.additions
     ];
