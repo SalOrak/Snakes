@@ -21,6 +21,10 @@
     ./gamedev.nix
   ];
 
+  # Email
+  email.enable = true;
+  email.protonmail.enable = true;
+
   # Gaming (client)
   games.enable = true;
   games.pokemonHacking = true;
