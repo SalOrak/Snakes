@@ -31,4 +31,12 @@
 
   # Gamedev Software
   gamedev.enable = true;
+
+  # Wacom Support through opentablet
+  wacom.enable = true;
+
+  # Remote Drive (Google Drive*)
+  remoteDrive.enable = true;
+  remoteDrive.personal = true;
+  remoteDrive.work = true;
 }
