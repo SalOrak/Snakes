@@ -2,12 +2,19 @@
   pkgs,
   config,
   outputs,
+  lib,
   ...
 }: {
-  nixpkgs.overlays = [
-    outputs.overlays.additions
-  ];
-  environment.systemPackages = with pkgs; [
-    cmatrix
-  ];
+  options = {
+    cmatrix.enable = lib.mkEnableOption "Orak Cmatrix package";
+  };
+
+  config = lib.mkIf options.cmatrix.enable {
+    nixpkgs.overlays = [
+      outputs.overlays.additions
+    ];
+    environment.systemPackages = with pkgs; [
+      cmatrix
+    ];
+  };
 }

@@ -2,10 +2,17 @@
   pkgs,
   config,
   input,
+  lib,
   ...
 }: {
-  hardware.opentabletdriver = {
-    enable = true;
-    daemon.enable = true;
+  options = {
+    wacom.enable = lib.mkEnableOption "Enable Wacom software (opentablet)";
+  };
+
+  config = lib.mkIf config.wacom.enable {
+    hardware.opentabletdriver = {
+      enable = true;
+      daemon.enable = true;
+    };
   };
 }
