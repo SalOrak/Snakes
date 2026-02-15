@@ -25,12 +25,12 @@
     environment.systemPackages = with pkgs;
       []
       ++ lib.optionals config.gamedev.pixelart [
-		krita 
-		aseprite
-		pinta
+        krita
+        aseprite
+        pinta
       ]
       ++ lib.optionals config.gamedev.engines [
-		godot
-      ]
+        godot
+      ];
   };
 }
