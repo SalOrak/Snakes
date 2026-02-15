@@ -12,8 +12,5 @@
 
     # Tor
     pkgs.tor
-
-    # Pinentry
-    pkgs.wayprompt
   ];
 }
