@@ -18,8 +18,13 @@
     ./virtualization.nix
     ./rust.nix
     ./wacom.nix
+    ./gamedev.nix
   ];
 
+  # Gaming (client)
   games.enable = true;
   games.pokemonHacking = true;
+
+  # Gamedev Software
+  gamedev.enable = true;
 }
