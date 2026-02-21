@@ -13,7 +13,7 @@
     # Tor
     pkgs.tor
 
-    kitty
-    neovide
+    pkgs.kitty
+    pkgs.neovide
   ];
 }
