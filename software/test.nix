@@ -12,5 +12,8 @@
 
     # Tor
     pkgs.tor
+
+    kitty
+    neovide
   ];
 }
