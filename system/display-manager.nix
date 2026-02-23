@@ -3,13 +3,21 @@
   config,
   ...
 }: {
+  console = {
+    enable = true;
+    font = "ter-v32n";
+    keyMap = "us";
+    packages = [pkgs.terminus_font];
+  };
   services = {
     displayManager = {
       ly.enable = true;
       ly.package = pkgs.ly;
       ly.settings = {
         animation = "none";
-        #border_fg = "0x00FFFFFF";
+        bg = "0xFF223249";
+        fg = "0xFF54546D";
+        border_fg = "0xFF2D4F67";
         initial_info_text = "Welcome back";
         vi_mode = true;
         vi_default_mode = "insert";
