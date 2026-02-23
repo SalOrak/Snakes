@@ -15,10 +15,8 @@
       pkgs.catppuccin-sddm.override {
         flavor = "macchiato";
         accent = "sapphire";
-        font = "Iosevka";
+        # font = "Iosevka";
         fontSize = "18";
-        # background = "${./wallpaper.png}";
-        loginBackground = true;
       }
     )
   ];
@@ -28,6 +26,9 @@
       sddm = {
         enable = true;
         theme = "catppucin-macchiato-sapphire";
+        wayland = {
+          enable = true;
+        };
       };
       ly = {
         enable = false;
