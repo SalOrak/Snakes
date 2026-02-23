@@ -3,19 +3,19 @@
   config,
   ...
 }: {
-  console = {
-    enable = true;
-    font = "solar24x32";
-    keyMap = "us";
-    packages = [pkgs.terminus_font];
-  };
+  # console = {
+  #   enable = true;
+  #   font = "solar24x32";
+  #   keyMap = "us";
+  #   packages = [pkgs.terminus_font];
+  # };
 
   environment.systemPackages = [
     (
       pkgs.catppuccin-sddm.override {
         flavor = "macchiato";
         accent = "sapphire";
-        # font = "Iosevka";
+        font = "Iosevka";
         fontSize = "18";
       }
     )
@@ -25,7 +25,8 @@
     displayManager = {
       sddm = {
         enable = true;
-        theme = "catppucin-macchiato-sapphire";
+        theme = "catppuccin-macchiato-sapphire";
+        package = pkgs.kdePackages.sddm;
         wayland = {
           enable = true;
         };
