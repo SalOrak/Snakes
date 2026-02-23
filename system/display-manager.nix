@@ -14,7 +14,7 @@
     (
       pkgs.catppuccin-sddm.override {
         flavor = "macchiato";
-        accent = "mauve";
+        accent = "sapphire";
         font = "Iosevka";
         fontSize = "18";
         # background = "${./wallpaper.png}";
@@ -27,7 +27,7 @@
     displayManager = {
       sddm = {
         enable = true;
-        theme = "catppucin-macciato-mauve";
+        theme = "catppucin-macchiato-sapphire";
       };
       ly = {
         enable = false;
