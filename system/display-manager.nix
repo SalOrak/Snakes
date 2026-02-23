@@ -5,22 +5,42 @@
 }: {
   console = {
     enable = true;
-    font = "ter-v32n";
+    font = "solar24x32";
     keyMap = "us";
     packages = [pkgs.terminus_font];
   };
+
+  environment.systemPackages = [
+    (
+      pkgs.catppuccin-sddm.override {
+        flavor = "macchiato";
+        accent = "mauve";
+        font = "Iosevka";
+        fontSize = "18";
+        # background = "${./wallpaper.png}";
+        loginBackground = true;
+      }
+    )
+  ];
+
   services = {
     displayManager = {
-      ly.enable = true;
-      ly.package = pkgs.ly;
-      ly.settings = {
-        animation = "none";
-        bg = "0xFF223249";
-        fg = "0xFF54546D";
-        border_fg = "0xFF2D4F67";
-        initial_info_text = "Welcome back";
-        vi_mode = true;
-        vi_default_mode = "insert";
+      sddm = {
+        enable = true;
+        theme = "catppucin-macciato-mauve";
+      };
+      ly = {
+        enable = false;
+        package = pkgs.ly;
+        settings = {
+          animation = "none";
+          bg = "0xFF223249";
+          fg = "0xFF54546D";
+          border_fg = "0xFF2D4F67";
+          initial_info_text = "Welcome back";
+          vi_mode = true;
+          vi_default_mode = "insert";
+        };
       };
       defaultSession = "none+i3";
     };
