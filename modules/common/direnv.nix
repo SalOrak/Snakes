@@ -14,3 +14,4 @@
     # See https://github.com/SalOrak/dotfiles/blob/main/files/direnv/direnvrc
     nix-direnv.enable = true;
   };
+}

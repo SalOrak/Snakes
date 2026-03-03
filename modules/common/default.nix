@@ -9,7 +9,6 @@
     ./dbus.nix
     ./direnv.nix
     ./gnupg.nix
-    ./services.nix
     ./documents.nix
   ];
 }
