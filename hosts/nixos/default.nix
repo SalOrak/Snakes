@@ -22,6 +22,9 @@
     ../../modules/services/ssh.nix
     ../../modules/services/udev.nix
 
+    # Syncthing
+    ./syncthing.nix
+
     # Software
     ../../modules/software/common.nix
     ../../modules/software/email.nix

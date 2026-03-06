@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgs-unstable,
   config,
   lib,
   ...
@@ -22,13 +23,13 @@
   };
 
   config = lib.mkIf config.gamedev.enable {
-    environment.systemPackages = 
+    environment.systemPackages =
       []
       ++ lib.optionals config.gamedev.pixelart [
         pkgs.krita
         pkgs.aseprite
         pkgs.pinta
-		config.gamedev.godot
+        config.gamedev.godot
       ];
   };
 }

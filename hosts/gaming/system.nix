@@ -4,11 +4,6 @@
   lib,
   ...
 }: {
-  imports = [
-    # Include the results of the hardware scan.
-    /etc/nixos/hardware-configuration.nix
-  ];
-
   networking.hostName = "gaming"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
