@@ -26,8 +26,8 @@
     {
       environment.systemPackages = [
         config.email.pkg
-        isync
-        notmuch
+        pkgs.isync
+        pkgs.notmuch
       ];
     }
     (lib.mkIf config.email.protonmail.enable {

@@ -20,7 +20,7 @@
         pass
         gnupg
       ]
-      ++ lib.optionals password-manager.secret-service [
+      ++ lib.optionals config.password-manager.secret-service [
         wayprompt # Prompt for git password
         libsecret
         sshpass

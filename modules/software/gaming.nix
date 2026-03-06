@@ -20,7 +20,7 @@
     };
   };
 
-  config = lib.mkIf config.games.enable {
+  config = lib.mkIf config.games.client.enable {
     environment.systemPackages = with pkgs;
       []
       ++ lib.optionals config.games.pokemonHacking [
