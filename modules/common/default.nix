@@ -10,5 +10,6 @@
     ./direnv.nix
     ./gnupg.nix
     ./documents.nix
+    ./disk.nix
   ];
 }

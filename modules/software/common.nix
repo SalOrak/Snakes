@@ -25,10 +25,13 @@
         neovide
         librewolf
         kitty
+        alacritty
+        alacritty-theme
         obsidian
         inkscape
       ]
       ++ lib.optionals config.cli.enable [
+        bat
         neovim
         starship
         fzf

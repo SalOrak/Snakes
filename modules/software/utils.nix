@@ -18,6 +18,11 @@
     environment.systemPackages = with pkgs;
       [
         zlib
+        e2fsprogs
+        dosfstools
+
+        # Temperature wise
+        lm_sensors
 
         # Theme
         gruvbox-dark-icons-gtk

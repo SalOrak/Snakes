@@ -15,8 +15,5 @@
     # grub.theme = "${pkgs.grub-theme}";
   };
 
-  # Connect xbox controller
-  boot.extraModprobeConfig = ''
-    options bluetooth disable_ertm=Y
-  '';
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 }

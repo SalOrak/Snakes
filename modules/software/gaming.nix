@@ -22,11 +22,9 @@
 
   config = lib.mkIf config.games.enable {
     environment.systemPackages = with pkgs;
-      [yazi]
+      []
       ++ lib.optionals config.games.pokemonHacking [
-        wineWowPackages.waylandFull
-        winetricks
-        bottles
+        bottles # PKHex
         pokefinder
         desmume
       ]

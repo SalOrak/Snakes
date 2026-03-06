@@ -17,10 +17,13 @@
     environment.systemPackages = with pkgs;
       [
         keepassxc
+        pass
+        gnupg
       ]
       ++ lib.optionals password-manager.secret-service [
         wayprompt # Prompt for git password
         libsecret
+        sshpass
       ];
   };
 }

@@ -13,8 +13,6 @@
       example = lib.literalExpression "/home/user/.steam/root/compatibilitytools.d";
       description = "Set the path for the Steam compatibility tooling.";
     };
-
-    server-gaming.wayland.enable = lib.mkEnableOption "Installs wayland utils for gaming.";
   };
 
   config = lib.mkIf config.server-gaming.enable {
