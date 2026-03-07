@@ -27,6 +27,15 @@
       description = "Packages for Zig programming.";
     };
 
+    programming.markdown.enable = lib.mkEnableOption "Setup Markdown.";
+    programming.markdown.pkgs = lib.mkOption {
+      type = lib.types.listOf lib.types.package;
+      default = with pkgs; [
+        marksman
+      ];
+      description = "Packages for Markdown.";
+    };
+
     programming.java.enable = lib.mkEnableOption "Setup Java Programming";
     programming.java.pkgs = lib.mkOption {
       type = lib.types.listOf lib.types.package;
@@ -125,6 +134,7 @@
       ++ lib.optionals config.programming.nasm.enable config.programming.nasm.pkgs
       ++ lib.optionals config.programming.c.enable config.programming.c.pkgs
       ++ lib.optionals config.programming.embedded.enable config.programming.embedded.pkgs
+      ++ lib.optionals config.programming.markdown.enable config.programming.markdown.pkgs
       ++ lib.optionals config.programming.web.enable config.programming.web.pkgs;
   };
 }

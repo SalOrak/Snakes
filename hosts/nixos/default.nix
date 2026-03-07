@@ -54,13 +54,16 @@
 
   manual.enable = true;
 
-  programming.rust.enable = true;
-  programming.zig.enable = true;
-  programming.java.enable = true;
-  programming.nix.enable = true;
-  programming.c.enable = true;
-  programming.embedded.enable = true;
-  programming.web.enable = true;
+  programming = {
+    rust.enable = true;
+    zig.enable = true;
+    java.enable = true;
+    nix.enable = true;
+    c.enable = true;
+    embedded.enable = true;
+    markdown.enable = true;
+    web.enable = true;
+  };
 
   utils = {
     enable = true;

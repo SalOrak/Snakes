@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./nix.nix
+    ./nixld.nix
     ./audio.nix
     ./dbus.nix
     ./direnv.nix
