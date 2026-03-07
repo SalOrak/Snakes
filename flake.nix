@@ -22,31 +22,41 @@
     hostname = "nixos";
     user = "hector";
   in {
-    packages."${system}" = import ./pkgs nixpkgs.legacyPackages."${system}";
-
     # Formatter for your nix files, available through 'nix fmt'
     formatter."${system}" = nixpkgs.legacyPackages."${system}".alejandra;
 
-    # Your custom packages and modifications, exported as overlays
-    overlays = import ./overlays {inherit inputs;};
+    nixosConfigurations = {
+      "nixos" = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs outputs system;
 
-    nixosConfigurations."${hostname}" = nixpkgs.lib.nixosSystem {
-      specialArgs = {
-        inherit inputs outputs system;
-
-        pkgs-unstable = import nixpkgs-unstable {
-          inherit system;
-          config.allowUnfree = true;
+          pkgs-unstable = import nixpkgs-unstable {
+            inherit system;
+            config.allowUnfree = true;
+          };
         };
-      };
 
-      modules = [
-        # Main Nixos Configuration file
-        ./system
-        ./software
-        # ./overlays
-        ({pkgs, ...}: {nixpkgs.overlays = [inputs.rust-overlay.overlays.default];})
-      ];
+        modules = [
+          # Main Nixos Configuration file
+          ./hosts/nixos
+          # ./overlays
+          ({pkgs, ...}: {nixpkgs.overlays = [inputs.rust-overlay.overlays.default];})
+        ];
+      };
+      "gaming" = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs outputs system;
+          pkgs-unstable = import nixpkgs-unstable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+        };
+        modules = [
+          ./hosts/gaming
+          # ./overlays
+          ({pkgs, ...}: {nixpkgs.overlays = [inputs.rust-overlay.overlays.default];})
+        ];
+      };
     };
   };
 }
