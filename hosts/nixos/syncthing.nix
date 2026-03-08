@@ -18,7 +18,7 @@
     settings = {
       gui = {
         user = "user";
-        password = "$2y$12$r5OyOjbLBGAijRtoQ31xBOf0OKtJKYi6Pgl4CU9UiDeGUM9CwBffy";
+        password = "$2b$12$wvHTk8gdzixlGQ67qgwz3uYfCHxTh1ENaRPVeYDk8LzFyEwkuQ7PS";
       };
       devices = {
         "mobile" = {id = "CD2YOGC-PL6IVWC-TW3RGC4-AW6UPPI-LZGFIWB-7DNCN6G-QL4RZBS-HD65RQQ";};

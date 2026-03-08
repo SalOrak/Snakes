@@ -100,7 +100,7 @@
           vi_default_mode = "insert";
         };
       };
-      defaultSession = "none+i3";
+      defaultSession = "sway";
     };
 
     xserver = {
