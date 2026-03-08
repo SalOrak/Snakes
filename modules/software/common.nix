@@ -26,9 +26,11 @@
         librewolf
         kitty
         alacritty
+		foot
         alacritty-theme
         obsidian
         inkscape
+		firefox
       ]
       ++ lib.optionals config.cli.enable [
         hut
