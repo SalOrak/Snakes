@@ -54,9 +54,8 @@
   hardware.enableAllFirmware = true;
   hardware.graphics.enable = true;
   hardware.nvidia = {
-    open = false;
+    open = true;
     modesetting.enable = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

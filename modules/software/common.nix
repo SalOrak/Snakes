@@ -46,6 +46,7 @@
         unzip
         jq
         gitFull
+        wofi
       ];
   };
 }
