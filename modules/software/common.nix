@@ -22,15 +22,12 @@
         file
       ]
       ++ lib.optionals config.gui.enable [
-        neovide
         librewolf
-        kitty
         alacritty
-		foot
         alacritty-theme
         obsidian
         inkscape
-		firefox
+        firefox
       ]
       ++ lib.optionals config.cli.enable [
         hut
@@ -49,6 +46,7 @@
         jq
         gitFull
         wofi
+		ueberzugpp # image support
       ];
   };
 }
