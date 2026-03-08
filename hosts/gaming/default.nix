@@ -6,7 +6,6 @@
   ...
 }: {
   imports = [
-    #/etc/hardware-configuration.nix
     ./hardware-configuration.nix
     ./bootloader.nix
     ./system.nix
