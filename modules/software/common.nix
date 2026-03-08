@@ -31,6 +31,7 @@
         inkscape
       ]
       ++ lib.optionals config.cli.enable [
+        hut
         bat
         neovim
         starship

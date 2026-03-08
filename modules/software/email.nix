@@ -28,6 +28,7 @@
         config.email.pkg
         pkgs.isync
         pkgs.notmuch
+        pkgs.msmtp
       ];
     }
     (lib.mkIf config.email.protonmail.enable {
