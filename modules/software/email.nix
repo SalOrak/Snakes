@@ -29,6 +29,7 @@
         pkgs.isync
         pkgs.notmuch
         pkgs.msmtp
+        pkgs.catimg
       ];
     }
     (lib.mkIf config.email.protonmail.enable {
