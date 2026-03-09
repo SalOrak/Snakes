@@ -29,7 +29,11 @@
         pkgs.isync
         pkgs.notmuch
         pkgs.msmtp
+
+        # Filters
         pkgs.catimg
+        pkgs.bat
+        pkgs.pandoc
       ];
     }
     (lib.mkIf config.email.protonmail.enable {

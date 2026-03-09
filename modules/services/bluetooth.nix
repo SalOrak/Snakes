@@ -7,6 +7,7 @@
     bluez
     bluez-alsa
     bluez-tools
+	blueman
   ];
   hardware = {
     bluetooth.enable = true;
