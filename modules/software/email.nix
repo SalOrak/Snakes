@@ -15,10 +15,10 @@
     	fi
 
     	echo "Deleting messages tagged as *deleted*"
-    	${pkgs.notmuch} search --format=text0 --output=files tag:deleted | xargs -0 --no-run-if-empty rm -v
+    	${pkgs.notmuch}/bin/notmuch search --format=text0 --output=files tag:deleted | xargs -0 --no-run-if-empty rm -v
 
-    	${pkgs.isync} -Va
-    	${pkgs.notmuch} new
+    	${pkgs.isync}/bin/mbsync -Va
+    	${pkgs.notmuch}/bin/notmuch new
   '';
 in {
   options = {
@@ -32,7 +32,7 @@ in {
     email.mbsync = lib.mkEnableOption "Enable Mbsync service";
     email.notmuch.path = lib.mkOption {
       type = lib.types.path;
-      default = "~/.mail/";
+      default = "/home/hector/.mail/";
       example = lib.literalExpression "/home/user/path/to/notmuch/db";
       description = "Path to the notmuch database.";
     };
