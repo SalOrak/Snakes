@@ -17,7 +17,7 @@
     	echo "Deleting messages tagged as *deleted*"
     	${pkgs.notmuch} search --format=text0 --output=files tag:deleted | xargs -0 --no-run-if-empty rm -v
 
-    	${pkgs.mbsync} -Va
+    	${pkgs.isync} -Va
     	${pkgs.notmuch} new
   '';
 in {
@@ -30,6 +30,12 @@ in {
       description = "The package to use for the local email client.";
     };
     email.mbsync = lib.mkEnableOption "Enable Mbsync service";
+    email.notmuch.path = lib.mkOption {
+      type = lib.types.path;
+      default = "~/.mail/";
+      example = lib.literalExpression "/home/user/path/to/notmuch/db";
+      description = "Path to the notmuch database.";
+    };
     email.protonmail.enable = lib.mkEnableOption "Enable Protonmail service";
     email.protonmail.certPath = lib.mkOption {
       type = lib.types.path;
@@ -75,6 +81,15 @@ in {
               OnUnitActiveSec = "3m";
               Unit = "mbsync.service";
               Persistent = false;
+            };
+          };
+        };
+        paths = {
+          notmuch = {
+            description = "Notmuch sync on changes.";
+            pathConfig = {
+              PathChanged = config.email.notmuch.path;
+              Unit = "mbsync.service";
             };
           };
         };

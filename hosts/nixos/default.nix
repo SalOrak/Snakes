@@ -49,6 +49,7 @@
   cli.enable = true;
 
   email.enable = true;
+  email.mbsync = true;
 
   games.client.enable = true;
 
