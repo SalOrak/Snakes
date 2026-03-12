@@ -6,7 +6,7 @@
 }: {
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
-  networking.nameservers = ["1.1.1.1", "208.67.222.222", "9.9.9.9"];
+  networking.nameservers = ["1.1.1.1" "208.67.222.222" "9.9.9.9"];
 
   # Set your time zone.
   time.timeZone = "Europe/Madrid";
