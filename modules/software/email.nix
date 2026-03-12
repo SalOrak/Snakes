@@ -10,14 +10,14 @@
     NOTMUCH=$(pgrep notmuch)
 
     	if [ -n "$MBSYNC" -o -n "$NOTMUCH" ]; then
-    	echo "Already running one instance of mbsync or notmuch. Exiting..."
-    	exit 0
+			echo "Already running one instance of mbsync or notmuch. Exiting..."
+			exit 0
     	fi
 
     	echo "Deleting messages tagged as *deleted*"
     	${pkgs.notmuch}/bin/notmuch search --format=text0 --output=files tag:deleted | xargs -0 --no-run-if-empty rm -v
 
-    	${pkgs.isync}/bin/mbsync -Va
+    	${pkgs.isync}/bin/mbsync -a
     	${pkgs.notmuch}/bin/notmuch new
   '';
 in {
