@@ -6,19 +6,20 @@
   ...
 }: let
   mbsync-notmuch-script = pkgs.writeShellScriptBin "mbsync-notmuch-script" ''
-    	MBSYNC=$(pgrep mbsync)
-    NOTMUCH=$(pgrep notmuch)
+        	MBSYNC=$(pgrep mbsync)
+        NOTMUCH=$(pgrep notmuch)
 
-    	if [ -n "$MBSYNC" -o -n "$NOTMUCH" ]; then
-			echo "Already running one instance of mbsync or notmuch. Exiting..."
-			exit 0
-    	fi
+    if [ -n "$MBSYNC" -o -n "$NOTMUCH" ]; then
+       echo "Already running one instance of mbsync or notmuch. Exiting..."
+       exit 0
+        	fi
 
-    	echo "Deleting messages tagged as *deleted*"
-    	${pkgs.notmuch}/bin/notmuch search --format=text0 --output=files tag:deleted | xargs -0 --no-run-if-empty rm -v
+        	echo "Deleting messages tagged as *deleted*"
+        	${pkgs.notmuch}/bin/notmuch search --format=text0 --output=files tag:deleted | xargs -0 --no-run-if-empty rm -v
 
-    	${pkgs.isync}/bin/mbsync -a
-    	${pkgs.notmuch}/bin/notmuch new
+        	${pkgs.isync}/bin/mbsync -a
+        	${pkgs.notmuch}/bin/notmuch new
+			echo $PATH
   '';
 in {
   options = {
@@ -70,6 +71,11 @@ in {
               Type = "oneshot";
               ExecStart = "${mbsync-notmuch-script}/bin/mbsync-notmuch-script";
             };
+			path = [
+				pkgs.libsecret
+				pkgs.isync
+				pkgs.notmuch
+			];
           };
         };
         timers = {
