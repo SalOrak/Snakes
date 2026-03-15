@@ -33,6 +33,7 @@
         hut
         bat
         neovim
+		nvimpager
         starship
         fzf
         fd
@@ -46,7 +47,7 @@
         jq
         gitFull
         wofi
-		ueberzugpp # image support
+        ueberzugpp # image support
       ];
   };
 }
