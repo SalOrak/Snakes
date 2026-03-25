@@ -30,10 +30,11 @@
         firefox
       ]
       ++ lib.optionals config.cli.enable [
+	  nb
         hut
         bat
         neovim
-		nvimpager
+        nvimpager
         starship
         fzf
         fd

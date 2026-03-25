@@ -6,26 +6,26 @@
   ...
 }: let
   mbsync-notmuch-script = pkgs.writeShellScriptBin "mbsync-notmuch-script" ''
-         	MBSYNC=$(pgrep mbsync)
-         NOTMUCH=$(pgrep notmuch)
+      pgrep=${pkgs.toybox}/bin/pgrep
+    	MBSYNC=$(pgrep -x mbsync)
+    NOTMUCH=$(pgrep -x notmuch)
 
-	if test -z "$NOTMUCH_CONFIG"; then
-		echo "NOTMUCH CONFIG not found"
-		 NOTMUCH_CONFIG="$HOME/.config/notmuch/config"
-		 echo "Set config to $NOTMUCH_CONFIG"
-	fi
+      if test -z "$NOTMUCH_CONFIG"; then
+      	echo "NOTMUCH CONFIG not found"
+      	 NOTMUCH_CONFIG="$HOME/.config/notmuch/config"
+      	 echo "Set config to $NOTMUCH_CONFIG"
+      fi
 
-     if [ -n "$MBSYNC" -o -n "$NOTMUCH" ]; then
-        echo "Already running one instance of mbsync or notmuch. Exiting..."
-        exit 0
-         	fi
+          if [ -n "$MBSYNC" -o -n "$NOTMUCH" ]; then
+             echo "Already running one instance of mbsync or notmuch. Exiting..."
+             exit 0
+              	fi
 
-         	echo "Deleting messages tagged as *deleted*"
-         	${pkgs.notmuch}/bin/notmuch --config="$NOTMUCH_CONFIG" search --format=text0 --output=files tag:deleted | xargs -0 --no-run-if-empty rm -v
+              	echo "Deleting messages tagged as *deleted*"
+              	${pkgs.notmuch}/bin/notmuch --config="$NOTMUCH_CONFIG" search --format=text0 --output=files tag:deleted | xargs -0 --no-run-if-empty rm -v
 
-         	${pkgs.isync}/bin/mbsync -a
-         	${pkgs.notmuch}/bin/notmuch --config="$NOTMUCH_CONFIG" new
-    echo $PATH
+              	${pkgs.isync}/bin/mbsync -a
+              	${pkgs.notmuch}/bin/notmuch --config="$NOTMUCH_CONFIG" new
   '';
 in {
   options = {
@@ -81,6 +81,7 @@ in {
               pkgs.libsecret
               pkgs.isync
               pkgs.notmuch
+              pkgs.toybox # pgrep
             ];
           };
         };

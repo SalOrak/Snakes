@@ -35,6 +35,9 @@
     ../../modules/software/programming.nix
     ../../modules/software/utils.nix
     ../../modules/software/wacom.nix
+
+    # Testing
+    ../../modules/software/gamedev.nix
   ];
 
   # Services Options
@@ -52,6 +55,7 @@
   email.mbsync = true;
 
   games.client.enable = true;
+  gamedev.enable = true;
 
   manual.enable = true;
 

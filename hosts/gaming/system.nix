@@ -121,7 +121,10 @@
     };
   };
 
-  networking.interfaces.enp34s0.wakeOnLan.enable = true; # WoL Nixos
+  networking = {
+	  interfaces.enp34s0.wakeOnLan.enable = true; # WoL Nixos
+	  firewall.allowedUDPPorts = [ 9 ];
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
