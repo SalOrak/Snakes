@@ -26,6 +26,7 @@
 
               	${pkgs.isync}/bin/mbsync -a
               	${pkgs.notmuch}/bin/notmuch --config="$NOTMUCH_CONFIG" new
+              	${pkgs.notmuch}/bin/notmuch --config="$NOTMUCH_CONFIG" tag --batch --input="$HOME/.config/notmuch/batch-tagging"
   '';
 in {
   options = {
@@ -90,8 +91,8 @@ in {
             description = "Run mbsync every 3 min";
             wantedBy = ["timers.target"];
             timerConfig = {
-              OnStartupSec = "3m";
-              OnUnitActiveSec = "3m";
+              OnStartupSec = "2m";
+              OnUnitActiveSec = "2m";
               Unit = "mbsync.service";
               Persistent = false;
             };
