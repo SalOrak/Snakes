@@ -30,6 +30,7 @@
       ]
       ++ lib.optionals config.games.client.moonlight [
         # Gaming
+		mangohud # Cap FPS
         moonlight-qt
         libva-utils
         ffmpeg-full

@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgs-unstable,
   config,
   lib,
   ...
@@ -13,42 +14,42 @@
   config = {
     environment.systemPackages = with pkgs;
       [
-        coreutils
-        binutils
-        pciutils
-        inetutils
-        dmidecode
-        brightnessctl
-        file
+        pkgs.coreutils
+        pkgs.binutils
+        pkgs.pciutils
+        pkgs.inetutils
+        pkgs.dmidecode
+        pkgs.brightnessctl
+        pkgs.file
       ]
       ++ lib.optionals config.gui.enable [
-        librewolf
-        alacritty
-        alacritty-theme
-        obsidian
-        inkscape
-        firefox
+        pkgs.librewolf
+        pkgs.alacritty
+        pkgs.alacritty-theme
+        pkgs.obsidian
+        pkgs.inkscape
+        pkgs.firefox
       ]
       ++ lib.optionals config.cli.enable [
-	  nb
-        hut
-        bat
-        neovim
-        nvimpager
-        starship
-        fzf
-        fd
-        ripgrep
-        feh
-        wget
-        curl
-        tmux
-        zip
-        unzip
-        jq
-        gitFull
-        wofi
-        ueberzugpp # image support
+        pkgs.nb
+        pkgs.hut
+        pkgs.bat
+        pkgs-unstable.neovim
+        pkgs.nvimpager
+        pkgs.starship
+        pkgs.fzf
+        pkgs.fd
+        pkgs.ripgrep
+        pkgs.feh
+        pkgs.wget
+        pkgs.curl
+        pkgs.tmux
+        pkgs.zip
+        pkgs.unzip
+        pkgs.jq
+        pkgs.gitFull
+        pkgs.wofi
+        pkgs.ueberzugpp # image support
       ];
   };
 }
