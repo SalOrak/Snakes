@@ -34,6 +34,7 @@
         pkgs.nb
         pkgs.hut
         pkgs.bat
+		pkgs.yazi
         pkgs-unstable.neovim
         pkgs.nvimpager
         pkgs.starship

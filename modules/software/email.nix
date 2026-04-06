@@ -7,6 +7,7 @@
 }: let
   mbsync-notmuch-script = pkgs.writeShellScriptBin "mbsync-notmuch-script" ''
       pgrep=${pkgs.toybox}/bin/pgrep
+    	notify=${pkgs.dunst}/bin/dunstify
     	MBSYNC=$(pgrep -x mbsync)
     NOTMUCH=$(pgrep -x notmuch)
 
@@ -18,15 +19,18 @@
 
           if [ -n "$MBSYNC" -o -n "$NOTMUCH" ]; then
              echo "Already running one instance of mbsync or notmuch. Exiting..."
+			 $notify --icon=email "[Exiting]" "Already running one instance of mbsync or notmuch."
              exit 0
               	fi
 
+				$notify --icon=email "[Loading]" "Loading messages"
               	echo "Deleting messages tagged as *deleted*"
               	${pkgs.notmuch}/bin/notmuch --config="$NOTMUCH_CONFIG" search --format=text0 --output=files tag:deleted | xargs -0 --no-run-if-empty rm -v
 
               	${pkgs.isync}/bin/mbsync -a
               	${pkgs.notmuch}/bin/notmuch --config="$NOTMUCH_CONFIG" new
               	${pkgs.notmuch}/bin/notmuch --config="$NOTMUCH_CONFIG" tag --batch --input="$HOME/.config/notmuch/batch-tagging"
+				$notify --icon=email "[Finished]" "Succesfully loaded messages"
   '';
 in {
   options = {
