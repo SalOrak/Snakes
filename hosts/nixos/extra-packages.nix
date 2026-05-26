@@ -16,5 +16,7 @@
 
 	# Signal desktop
 	signal-desktop
+
+# discord
   ];
 }
