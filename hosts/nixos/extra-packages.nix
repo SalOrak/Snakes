@@ -13,5 +13,8 @@
     zola # SSG
 
     qemu
+
+	# Signal desktop
+	signal-desktop
   ];
 }
