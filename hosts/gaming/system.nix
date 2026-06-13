@@ -62,7 +62,7 @@
   users.users.user = {
     isNormalUser = true;
     description = "user";
-    extraGroups = ["networkmanager" "wheel" "docker" "dialout" "syncthing"];
+    extraGroups = ["networkmanager" "wheel" "docker" "dialout" "syncthing" "input" "users"];
   };
 
   users.users.server = {
