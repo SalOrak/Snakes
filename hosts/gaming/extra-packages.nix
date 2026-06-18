@@ -4,11 +4,11 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    neovide
     oversteer
     usb-modeswitch
 
     dunst # Notify service
+    kitty # for Yazi file manager
   ];
 
   hardware = {
