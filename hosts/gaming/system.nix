@@ -38,6 +38,7 @@
       sddm = {
         enable = true;
       };
+      defaultSession = "hyprland";
     };
 
     xserver = {
@@ -51,8 +52,12 @@
     # desktopManager.plasma6.enable = true;
   };
 
-  programs.sway = {
+  programs.hyprland = {
     enable = true;
+  };
+
+  programs.sway = {
+    enable = false;
     wrapperFeatures.gtk = true;
     extraPackages = with pkgs; [
       swaylock

@@ -18,9 +18,9 @@
   config = lib.mkIf config.server-gaming.enable {
     environment.systemPackages = with pkgs; [
       # Wine
-      wineWowPackages.stable
+      wineWow64Packages.stable
       winetricks
-      wineWowPackages.waylandFull
+      wineWow64Packages.waylandFull
     ];
 
     environment.sessionVariables = {

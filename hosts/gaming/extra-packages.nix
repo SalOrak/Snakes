@@ -7,6 +7,8 @@
     neovide
     oversteer
     usb-modeswitch
+
+    dunst # Notify service
   ];
 
   hardware = {
