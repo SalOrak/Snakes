@@ -18,7 +18,7 @@
       enable = true;
       man = {
         enable = true;
-        generateCaches = true;
+        cache.enable = true;
       };
       nixos.enable = true;
       info.enable = true;
