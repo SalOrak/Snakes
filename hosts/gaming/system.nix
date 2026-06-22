@@ -54,7 +54,16 @@
 
   programs.hyprland = {
     enable = true;
-    withUWSM = true;
+  };
+
+  systemd.user.services = {
+    hyprland-session = {
+      description = "Hyprland session to start graphical-session unit";
+      bindsTo = ["graphical-session.target"];
+      wants = ["graphical-session-pre.target"];
+      after = ["graphical-session-pre.target"];
+      postStop = "systemctl stop graphical-session.target";
+    };
   };
 
   programs.sway = {
