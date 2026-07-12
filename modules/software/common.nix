@@ -9,6 +9,7 @@
   options = {
     gui.enable = lib.mkEnableOption "Install GUI-based application";
     cli.enable = lib.mkEnableOption "Install CLI applications";
+    wayland.enable = lib.mkEnableOption "Install Wayland applications";
   };
 
   config = {
@@ -34,7 +35,7 @@
         pkgs.nb
         pkgs.hut
         pkgs.bat
-		pkgs.yazi
+        pkgs.yazi
         pkgs-unstable.neovim
         pkgs.nvimpager
         pkgs.starship
@@ -51,6 +52,14 @@
         pkgs.gitFull
         pkgs.wofi
         pkgs.ueberzugpp # image support
+      ]
+      ++ lib.optionals config.wayland.enable [
+        pkgs.wl-clipboard
+        pkgs.wf-recorder
+        pkgs.grim
+        pkgs.sway-contrib.grimshot
+        pkgs.slurp
+        pkgs.wofi
       ];
   };
 }
