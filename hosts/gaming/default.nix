@@ -39,6 +39,7 @@
   # common.nix
   gui.enable = true;
   cli.enable = true;
+  wayland.enable = true;
 
   # email.nix
   email.enable = true;
