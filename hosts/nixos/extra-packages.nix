@@ -14,10 +14,14 @@
 
     qemu
 
-	# Signal desktop
-	signal-desktop
+    # Signal desktop
+    signal-desktop
 
     # discord
-	discord
+    discord
+
+    kitty # for yazi manager
+
+    helix # Pau likes it. So do I
   ];
 }
