@@ -37,6 +37,7 @@
         pkgs.bat
         pkgs.yazi
         pkgs-unstable.neovim
+        pkgs-unstable.helix
         pkgs.nvimpager
         pkgs.starship
         pkgs.fzf
