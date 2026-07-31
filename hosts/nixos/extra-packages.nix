@@ -21,7 +21,6 @@
     discord
 
     kitty # for yazi manager
-
-    helix # Pau likes it. So do I
+	helix # Pau likes it. So do I
   ];
 }

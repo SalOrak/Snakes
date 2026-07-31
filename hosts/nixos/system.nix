@@ -73,7 +73,7 @@
         flavor = "macchiato";
         accent = "sapphire";
         font = "Iosevka";
-        fontSize = "18";
+        fontSize = "20";
       }
     )
   ];
@@ -101,7 +101,7 @@
           vi_default_mode = "insert";
         };
       };
-      defaultSession = "sway";
+      defaultSession = "hyprland";
     };
 
     xserver = {
@@ -124,6 +124,10 @@
         ];
       };
     };
+  };
+
+  programs.hyprland = {
+    enable = true;
   };
 
   programs.sway = {
