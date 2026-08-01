@@ -11,9 +11,9 @@ pkgs.stdenv.mkDerivation rec {
   buildInputs = with pkgs; [
     gcc
     gnumake
-    xorg.libX11
-    xorg.libXinerama
-    xorg.libXft
+    libx11
+    libxinerama
+    libxft
   ];
 
   buildPhase = ''

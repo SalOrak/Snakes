@@ -41,12 +41,12 @@
       ++ lib.optionals config.utils.x11 [
         xclip
         freeglut
-        xorg.libXi
-        xorg.libXmu
-        xorg.libXext
-        xorg.libX11
-        xorg.libXv
-        xorg.libXrandr
+        libxi
+        libxmu
+        libxext
+        libx11
+        libxv
+        libxrandr
       ]
       ++ lib.optionals config.utils.x11 [
         libtool
