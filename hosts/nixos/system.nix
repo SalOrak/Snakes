@@ -130,6 +130,18 @@
     enable = true;
   };
 
+  systemd.user.targets = {
+    hyprland-session = {
+      description = "Hyprland session to start graphical-session unit";
+      bindsTo = ["graphical-session.target"];
+      wants = ["graphical-session-pre.target"];
+      after = ["graphical-session-pre.target"];
+      unitConfig = {
+        PropagatesStopTo = "graphical-session.target";
+      };
+    };
+  };
+
   programs.sway = {
     enable = false;
     wrapperFeatures.gtk = true;
