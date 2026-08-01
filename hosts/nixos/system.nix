@@ -131,23 +131,14 @@
   };
 
   programs.sway = {
-    enable = true;
+    enable = false;
     wrapperFeatures.gtk = true;
     extraPackages = with pkgs; [
-      swaylock
-      swayidle
-      wl-clipboard
-      wf-recorder
-      grim
-      sway-contrib.grimshot
-      slurp
-      wofi
-
       # XDG Fix for waybar
-      waybar
-      xdg-utils
-      xdg-user-dirs
-      xdg-dbus-proxy
+      # waybar
+      # xdg-utils
+      # xdg-user-dirs
+      # xdg-dbus-proxy
       # xdg-desktop-portal
       # xdg-desktop-portal-wlr
       # xdg-desktop-portal-gnome
