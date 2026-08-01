@@ -4,6 +4,11 @@
   lib,
   ...
 }: {
+
+    environment.variables ={
+      ORMR = "Jormungandr"; 
+    };
+
   networking.hostName = "gaming"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
