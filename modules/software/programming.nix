@@ -96,6 +96,7 @@
       default = with pkgs; [
         nodejs_24
         vscode-css-languageserver # CSS LSP
+        vscode-langservers-extracted
       ];
       description = "Packages for Web programming.";
     };
@@ -125,6 +126,20 @@
         pkgs.gnumake
         pkgs.gdb
         pkgs.gf # GDB Frontend
+        pkgs.typst
+
+        # LSP
+        pkgs.hyprls
+        pkgs.bash-language-server
+        pkgs.ccls
+        pkgs.neocmakelsp
+        pkgs.fish-lsp
+        pkgs.jq-lsp
+        pkgs.lua-language-server
+        pkgs.systemd-lsp
+        pkgs.taplo # TOML lsp
+        pkgs.tinymist # Typst lsp
+        pkgs.yaml-language-server
       ]
       ++ lib.optionals config.programming.rust.enable config.programming.rust.pkgs
       ++ lib.optionals config.programming.zig.enable config.programming.zig.pkgs
