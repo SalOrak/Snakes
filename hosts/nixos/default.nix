@@ -50,6 +50,7 @@
 
   gui.enable = true;
   cli.enable = true;
+  wayland.enable = true;
 
   email.enable = true;
   email.mbsync = true;

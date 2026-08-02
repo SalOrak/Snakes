@@ -93,19 +93,6 @@
           enable = true;
         };
       };
-      ly = {
-        enable = false;
-        package = pkgs.ly;
-        settings = {
-          animation = "none";
-          bg = "0xFF223249";
-          fg = "0xFF54546D";
-          border_fg = "0xFF2D4F67";
-          initial_info_text = "Welcome back";
-          vi_mode = true;
-          vi_default_mode = "insert";
-        };
-      };
       defaultSession = "hyprland";
     };
 
@@ -115,19 +102,6 @@
         options = "ctrl:nocaps";
       };
       enable = true;
-      windowManager.dwm = {
-        enable = true;
-        package = pkgs.dwm;
-      };
-      windowManager.i3 = {
-        enable = true;
-        extraPackages = with pkgs; [
-          dmenu
-          i3status
-          i3lock
-          i3blocks
-        ];
-      };
     };
   };
 
