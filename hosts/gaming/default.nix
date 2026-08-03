@@ -72,5 +72,5 @@
   wacom.enable = true;
 
   # server-gaming.nix (Sunshine)
-  server-gaming.enable = true;
+  server-gaming.enable = false;
 }
