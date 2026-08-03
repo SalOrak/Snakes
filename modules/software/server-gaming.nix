@@ -28,13 +28,13 @@
     };
 
     services.avahi.publish = {
-      enable = true;
-      userServices = true;
+      enable = false;
+      userServices = false;
     };
 
     services.sunshine = {
-      enable = true;
-      autoStart = true;
+      enable = false;
+      autoStart = false;
       capSysAdmin = true;
       applications = {
         env = {
@@ -58,7 +58,7 @@
 
     # Open ports for sunshine
     networking.firewall = {
-      enable = true;
+      enable = false;
       allowedTCPPorts = [
         47984
         47989
