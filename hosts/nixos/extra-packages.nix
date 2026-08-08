@@ -5,7 +5,6 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    dunst # Notify service
     picom # Compositor
 
     yt-dlp
@@ -14,13 +13,5 @@
 
     qemu
 
-    # Signal desktop
-    signal-desktop
-
-    # discord
-    discord
-
-    kitty # for yazi manager
-	helix # Pau likes it. So do I
   ];
 }

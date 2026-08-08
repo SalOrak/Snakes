@@ -25,6 +25,8 @@
       ]
       ++ lib.optionals config.gui.enable [
         pkgs.librewolf
+        pkgs-unstable.kitty
+        pkgs-unstable.kitty-themes
         pkgs.alacritty
         pkgs.alacritty-theme
         pkgs.obsidian
@@ -38,6 +40,7 @@
         pkgs.yazi
         pkgs-unstable.neovim
         pkgs-unstable.helix
+        pkgs-unstable.gitu
         pkgs.nvimpager
         pkgs.starship
         pkgs.fzf

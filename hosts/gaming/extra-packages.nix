@@ -8,7 +8,6 @@
     usb-modeswitch
 
     dunst # Notify service
-    kitty # for Yazi file manager
     discord
   ];
 

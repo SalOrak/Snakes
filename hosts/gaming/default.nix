@@ -22,6 +22,7 @@
     # Software
     ../../modules/software/common.nix
     ../../modules/software/email.nix
+    ../../modules/software/communications.nix
     ../../modules/software/gamedev.nix
     ../../modules/software/gaming.nix
     ../../modules/software/manual.nix
@@ -43,6 +44,10 @@
 
   # email.nix
   email.enable = true;
+
+  # communications.nix
+  comms.gui.enable = true;
+  comms.cli.enable = true;
 
   # gamedev.nix
   gamedev.enable = true;
