@@ -13,5 +13,7 @@
 
     qemu
 
+    dunst
+
   ];
 }
