@@ -16,6 +16,7 @@
         openocd
         udev
         bacon
+        rust-analyzer
       ];
       description = "Packages for Rust programming.";
     };
