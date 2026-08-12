@@ -40,6 +40,7 @@
         pkgs.yazi
         pkgs-unstable.neovim
         pkgs-unstable.helix
+        pkgs-unstable.hx-lsp
         pkgs-unstable.gitu
         pkgs.nvimpager
         pkgs.starship
